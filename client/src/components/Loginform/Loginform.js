@@ -4,9 +4,9 @@ const Loginform = props => (
 
     //code in div
     <div>
-       <PageHeader>
+       {/* <PageHeader> */}
             Example page header <small>Subtext for header</small>
-       </PageHeader>; 
+       {/* </PageHeader>;  */}
     </div>
 );
 
