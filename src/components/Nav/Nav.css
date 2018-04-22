@@ -1,3 +1,13 @@
 #navdiv {
    background-color: orange;
+   opacity: 0.75;
+}
+.rapologize {
+    color: white;
+    font-family: 'Bilbo Swash Caps', cursive;
+    text-align: center;
+}
+
+.makewhite {
+    color: white;
 }

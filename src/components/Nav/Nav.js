@@ -22,15 +22,15 @@ export default class Example extends React.Component {
     return (
       <div id="navdiv">
         <Navbar color="faded" light>
-          <NavbarBrand href="/" className="mr-auto rapologize">Rapology</NavbarBrand>
+          <NavbarBrand href="/" className="mr-auto"><h1 className="rapologize">Rapology</h1></NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="/components/">Login</NavLink>
+                <NavLink href="/components/"><p className="makewhite">Login</p></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Sign Up</NavLink>
+                <NavLink href="https://github.com/reactstrap/reactstrap"><p className="makewhite">Sign Up</p></NavLink>
               </NavItem>
             </Nav>
           </Collapse>

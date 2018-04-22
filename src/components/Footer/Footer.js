@@ -1,19 +1,27 @@
 import React from "react";
+import { Container, Row, Col } from 'reactstrap';
 import "./Footer.css";
 
 
 const Footer = Footer => <footer className="foot">
-<div className="container">
-    <div className="row">
-        <div className="col-2">
+<Container>
+    <Row>
+        <Col md="2">
             <h4 className="lowerlogo">Rapology©</h4>
+        </Col>
+        <Col md="8" className="peeps">
+            <a href={"https://github.com/codemode9"} className="gitlinks" target="_blank">Timour</a><br></br>
+            <a href={"https://github.com/ianhawkoh"} className="gitlinks" target="_blank">Ian</a><br></br>
+            <a href={"https://github.com/chrisieaks"} className="gitlinks" target="_blank">Chris</a><br></br>
+            <a href={"https://github.com/Dvnwllms"} className="gitlinks" target="_blank">Devon</a><br></br>
+        </Col>
+        <Col md="2">
+        <div>
+            <img src={require(`/home/timour/apps/Rap-App/src/images/disc.png`)} className="turntables" alt="turntables"/>
         </div>
-        <div className="col-8">
-            <a href={"https://github.com/codemode9"}>Timour</a>
-        </div>
-    </div>
-</div>
-
-</footer>;
+        </Col> 
+    </Row>
+</Container>
+</footer>
 
 export default Footer;
