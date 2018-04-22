@@ -16,6 +16,8 @@ const App = () => (
           <div>
             <Nav />
             <Route exact path="/" component={Landing} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
             <Footer />
           </div>
         </Router>
