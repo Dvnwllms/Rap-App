@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
-import Loginform from "./components/Loginform";
 import Nav from "./components/Nav";
+import Landing from "./components/pages/Landing";
 
 
 
-const game = [{rapper: "common"},{rapper: "nas"}];
 
-class App extends Component {
-  render() {
-    return (
+const App = () => (
+  
       <div className="App">
-        <Nav />
+        <Router>
+          <div>
+            <Nav />
+            <Route exact path="/" component={Landing} />
+          </div>
+        </Router>
       </div>
-    );
-  }
-}
-
+);
 export default App;
