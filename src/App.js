@@ -16,8 +16,15 @@ const App = () => (
           <div>
             <Nav />
             <Route exact path="/" component={Landing} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
+{/*           
+******************Uncomment when pages built*****************
+
+   <Route exact path="/login" component={Login} />
+<Route exact path="/signup" component={Signup} />  
+
+******************Uncomment when pages built*****************
+
+ */}
             <Footer />
           </div>
         </Router>
