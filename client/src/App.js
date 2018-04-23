@@ -1,22 +1,34 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { withUser, update } from './services/withUser';
+import CreateAccountPage from './pages/CreateAccountPage';
+import LoginPage from './pages/LoginPage';
 import './App.css';
 // import Loginform from "./components/Loginform";
-
 class App extends Component {
+  componentDidMount() {
+    axios.get('/api/auth')
+      .then(res => {
+        update(res.data);
+      })
+      .catch(err => {
+        if (err.response.status === 401) {
+          update(null);
+        }
+      });
+  }
   render() {
+    const { user } = this.props;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router>
+        <Switch>
+        <Route exact path='/signup' component={CreateAccountPage} />
+        <Route exact path='/login' component={LoginPage} />
+        </Switch>
+      </Router>
     );
   }
 }
 
-export default App;
+export default withUser(App);
