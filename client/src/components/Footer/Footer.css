@@ -1,0 +1,33 @@
+.foot {
+    position:absolute;
+   bottom:0;
+   width:100%;
+   height:120px;   /* Height of the footer */
+   background: black;
+   opacity: 0.8;
+}
+
+.lowerlogo {
+    color: white;
+    padding: 25%;
+}
+
+.peeps {
+color: white;
+margin-top: 15px;
+}
+
+.gitlinks {
+    color: white;
+}
+
+.year {
+    font-size: 160%;
+    color: white;
+    text-align: right;
+}
+
+.turntables {
+    height: 70%;
+    width: 70%;
+}

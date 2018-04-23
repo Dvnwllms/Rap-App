@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { withUser, update } from './services/withUser';
 import CreateAccountPage from './pages/CreateAccountPage';
 import LoginPage from './pages/LoginPage';
+//import Landingpage from './pages/Landingpage'
+import Nav from './components/Nav';
+import Footer from './components/Footer';
 import './App.css';
 // import Loginform from "./components/Loginform";
 class App extends Component {
@@ -21,12 +24,17 @@ class App extends Component {
   render() {
     const { user } = this.props;
     return (
+      <div>
+      <Nav />
       <Router>
         <Switch>
+        {/* <Route exact path="/" component={Landingpage} /> */}
         <Route exact path='/signup' component={CreateAccountPage} />
         <Route exact path='/login' component={LoginPage} />
         </Switch>
       </Router>
+      <Footer />
+      </div>
     );
   }
 }
