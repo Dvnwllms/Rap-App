@@ -17,7 +17,7 @@ const Footer = Footer => <footer className="foot">
         </Col>
         <Col md="2">
         <div>
-            <img src={require(`/home/timour/apps/Rap-App/src/images/disc.png`)} className="turntables" alt="turntables"/>
+            <img src={require(`../../images/disc.png`)} className="turntables" alt="turntables"/>
         </div>
         </Col> 
     </Row>
