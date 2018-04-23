@@ -2,8 +2,11 @@ import axios from 'axios';
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { withUser, update } from './services/withUser';
+import LandingPage from './pages/LandingPage';
+import BracketPage from './pages/BracketPage';
 import CreateAccountPage from './pages/CreateAccountPage';
 import LoginPage from './pages/LoginPage';
+
 import './App.css';
 // import Loginform from "./components/Loginform";
 class App extends Component {
@@ -23,8 +26,10 @@ class App extends Component {
     return (
       <Router>
         <Switch>
+        <Route exact path='/' component={LandingPage} />
         <Route exact path='/signup' component={CreateAccountPage} />
         <Route exact path='/login' component={LoginPage} />
+        <Route exact path='/bracket' component={BracketPage} />
         </Switch>
       </Router>
     );
