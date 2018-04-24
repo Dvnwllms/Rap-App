@@ -29,7 +29,7 @@ class App extends Component {
       <div>
       <Nav />
       <Router>
-        <Switch>
+        <Switch> 
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/signup' component={CreateAccountPage} />
         <Route exact path='/login' component={LoginPage} />
