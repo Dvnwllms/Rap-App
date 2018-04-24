@@ -2,9 +2,11 @@ import axios from 'axios';
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { withUser, update } from './services/withUser';
+import LandingPage from './pages/LandingPage';
+import BracketPage from './pages/BracketPage';
 import CreateAccountPage from './pages/CreateAccountPage';
 import LoginPage from './pages/LoginPage';
-//import Landingpage from './pages/Landingpage'
+// import Landingpage from './pages/Landingpage'
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import './App.css';
@@ -27,10 +29,17 @@ class App extends Component {
       <div>
       <Nav />
       <Router>
+<<<<<<< HEAD
+        <Switch> 
+        <Route exact path='/' component={LandingPage} />
+        <Route exact path='/signup' component={CreateAccountPage} />
+=======
         <Switch>
         {/* <Route exact path="/" component={Landingpage} /> */}
         <Route exact path='/' component={CreateAccountPage} />
+>>>>>>> 55fb5fa68d61a454cd62e8c2e30970a233835ef6
         <Route exact path='/login' component={LoginPage} />
+        <Route exact path='/bracket' component={BracketPage} />
         </Switch>
       </Router>
       <Footer />

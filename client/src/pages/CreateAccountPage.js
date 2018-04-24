@@ -57,7 +57,7 @@ class CreateAccountPage extends Component {
   render() {
     return (
       <Container>
-        <Form onSubmit={this.handleLogin}>
+        <Form className="Form" onSubmit={this.handleLogin}>
           <FormGroup row>
             <Label for="exampleEmail" sm={2}>
               Username
@@ -86,7 +86,7 @@ class CreateAccountPage extends Component {
               />
             </Col>
           </FormGroup>
-          <Button type="submit">Create Account</Button>
+          <Button type="submit">Log In</Button>
         </Form>
       </Container>
     );

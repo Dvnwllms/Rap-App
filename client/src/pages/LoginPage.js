@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Nav from "../components/Nav/Nav.js"
+import "./LoginPage.css"
 import {
   Col,
   Button,
@@ -52,7 +54,7 @@ class LoginPage extends Component {
   render() {
     return (
       <Container>
-        <Form onSubmit={this.handleLogin}>
+        <Form className="Form" onSubmit={this.handleLogin}>
           <FormGroup row>
             <Label for="exampleEmail" sm={2}>
               Username
