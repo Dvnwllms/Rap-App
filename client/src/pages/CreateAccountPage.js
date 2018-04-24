@@ -86,7 +86,7 @@ class CreateAccountPage extends Component {
               />
             </Col>
           </FormGroup>
-          <Button type="submit">Create Account</Button>
+          <Button type="submit"><a href="./bracket/index.html">Create Account</a></Button>
         </Form>
       </Container>
     );
