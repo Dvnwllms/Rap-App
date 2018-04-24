@@ -86,7 +86,7 @@ class CreateAccountPage extends Component {
               />
             </Col>
           </FormGroup>
-          <Button type="submit">Log In</Button>
+          <Button type="submit"><a href="https://ianhawkoh.github.io/bracket/">Create Account</a></Button>
         </Form>
       </Container>
     );
